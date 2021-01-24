@@ -163,7 +163,7 @@ Delete it completely to stop fading
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+#breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
 
 /* Top Navigation */
 #mainav{}
@@ -173,13 +173,10 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
 #mainav li:last-child{margin-right:0;}
 #mainav li li{width:100%; margin:0;}
-#mainav li a{display:block; padding:30px 0;}
+#mainav li a{display:block;padding : 0.2em;}
 #mainav li li a{border:solid; border-width:0 0 1px 0;}
-#mainav .drop{padding-left:15px;}
-#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
-#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
-#mainav .drop::after{top:35px; left:5px;}
-#mainav li li .drop::after{top:15px; left:5px;}
+
+#mainav li li a{display:block; margin:0; padding:10px 15px;}
 #mainav ul ul{visibility:hidden; opacity:0;}
 #mainav ul li:hover > ul{visibility:visible; opacity:1;}
 #mainav form{display:none; margin:0; padding:0;}
@@ -187,7 +184,19 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav form select{width:100%; padding:5px; border:1px solid;}
 #mainav form select option{margin:5px; padding:0; border:none;}
 #mainav li a{color:inherit;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#FF090F; background-color:inherit;}
+
+/* Background for li */
+#mainav .active a
+{
+	color:#FF090F; 
+	background-color: inherit;
+}
+
+#mainav a:hover
+{
+	background-color: rgb(248, 201, 218);
+}
+
 #mainav li li a, #mainav .active li a{color:#474747; background-color:rgba(233,233,233,.8);/* #E9E9E9 */ border-color:rgba(255,255,255,.4);}
 #mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#FF090F;}
 #mainav form select{color:#FFFFFF; background-color:#000000;}
@@ -494,4 +503,121 @@ h1{
 .pdf-frame{
 	height: 100%;
 	width: 75%;
+}
+.content_competence{
+	width:90%;
+	margin-left: auto;
+	margin-right: auto;
+	/* background-color: #c7dce6; */
+	margin-bottom:20px ;
+}
+.bloc_competence{
+	width:100%;
+	background-color: rgb(231, 223, 203);
+	border: 1px black solid;
+	margin-bottom: 10px;
+	display: block;
+    overflow: auto;
+}
+.cpt_1{
+	width:15%;
+	float:left;
+	background-color: rgb(231, 223, 203);
+	padding-left: 4px;
+	font-weight: bolder;
+
+}
+.cpt_2{
+	width:85%;
+	float:left;
+	padding-left: 10px;
+	background-color: #f1cedc; 
+
+}
+.head_cpt{
+	padding-top: 1cm;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+	width:100%;
+	height:100px;
+}
+.head1_cpt{
+	font-size: 20px;
+	font-weight: bolder;
+	background-color: rgb(214, 201, 238);
+	width: 100%;
+	height:40px;
+	padding-top: 3px;
+	
+}
+.projet_personnel{
+	margin-left: auto;
+	margin-right: auto;
+	width:90%;
+	/* height:400px; */
+	/* background-color: #c7dce6; */
+	margin-bottom: 20px ;
+	padding-bottom: 20px;
+}
+.pro_per{
+	width:60%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	word-spacing:2px;
+	line-height: 30px;
+}
+.loisirs{
+	width:90%;
+	margin-left: auto;
+	margin-right: auto;
+	/* background-color: #c7dce6; */
+	height:400px;
+}
+.part_loisir{
+	width:24.5%;
+	position:relative; 	
+}
+
+.img_loisir{
+	width:270px ;
+	height:200px;	
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+.overlay1{
+	position:absolute;
+	top: 0;
+	left:0;
+	right:0;
+	/* bottom:0;
+	left:24.5%;
+	right:0; */
+	height:100%;
+	width:270px;
+	opacity:0;
+	transition: .5s ease;
+	background-color: rgb(167, 178, 224);
+	margin-left: auto;
+    margin-right: auto;
+}
+.part_loisir:hover .overlay1{
+	opacity:0.8;
+	cursor: pointer;
+}
+.text_loisir{
+color: red;
+  font-size: 20px;
+  font-weight: bolder;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.photo-losirs{
+	display: flex;
 }
