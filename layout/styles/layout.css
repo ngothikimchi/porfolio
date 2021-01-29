@@ -348,28 +348,34 @@ h1{
 
 .partie_BTS{
 	width:100%;
-	height:200px;
-	display: flex;
+	height:200px; 
+	display: block;
 	align-items: center;
+	position: relative;
 }
 .sio{
 	font-size: 80px;
 	color:white;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
+	position: absolute;
+	top:50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	left:50%;
 }
 .definition_bts{
 	width:100%;
-	height:150px;
-
+	/* height:150px; */
+	margin-bottom: 1%;
+/* 	display: block;
+	overflow: auto; */
+	height:auto;
 }
 .def_bts1{
 	text-align: center;
 	font-size: larger;
 	color: orange;
 	font-weight: bolder;
-	margin-bottom: 2%;
+	/* margin-bottom: 2%; */
 	margin-top: 2%;
 }
 .def_bts2{
@@ -380,16 +386,20 @@ h1{
 	color: grey;
 	padding-left: 2%;
 }
-.option{
+.option_bts{
 	width:100%;
-	height:500px;
+	/* height:500px; */
+	display: block;
+    overflow: auto;
 
 }
 .part_option{
 	width:50%;
-	height:40%;
+	/* height:40%; */
 	float:left;
 	padding-left: 2%;
+	display: block;
+    overflow: auto;
 
 }
 .stage{
@@ -510,6 +520,8 @@ h1{
 	margin-right: auto;
 	/* background-color: #c7dce6; */
 	margin-bottom:20px ;
+	display: block;
+    overflow: auto;
 }
 .bloc_competence{
 	width:100%;
